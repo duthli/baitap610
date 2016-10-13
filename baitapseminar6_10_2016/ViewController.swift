@@ -9,17 +9,48 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    
+    @IBAction func push(_ sender: AnyObject) {
+        
+        if(sender.tag == 101)
+        {
+            let view = storyboard?.instantiateViewController(withIdentifier: "bai1")
+            navigationController?.pushViewController(view!, animated: true)
+        }
+        if(sender.tag == 102)
+        {
+            let view = storyboard?.instantiateViewController(withIdentifier: "bai2")
+            navigationController?.pushViewController(view!, animated: true)
+
+        }
+        if(sender.tag == 103)
+        {
+            let view = storyboard?.instantiateViewController(withIdentifier: "bai3")
+            navigationController?.pushViewController(view!, animated: true)
+
+        }
     }
-
-
+    
+    
 }
+
+
+
+
+//MARK: bai tap 1 dem string
+
+
+//MARK: bai tap 2 em khong hieu de bai -_-
+
+
+
+//MARK: bai tap 3 
 
